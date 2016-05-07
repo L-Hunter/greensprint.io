@@ -1,9 +1,7 @@
 language: python
 python:
     - "3.4"
-cache: apt
-install:
-script:
+script: "echo 'Deploying'"
 branches:
     only:
         - master
