@@ -15,7 +15,7 @@ deploy:
     endpoint: greensprint.io.s3-website-us-east-1.amazonaws.com
     region: us-east-1
     skip_cleanup: true
-    local-dir: output
+    local-dir: src
     acl: public_read
     detect_encoding: true
 notifications:
