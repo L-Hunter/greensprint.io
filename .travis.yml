@@ -1,0 +1,20 @@
+language: python
+python:
+    - "3.4"
+cache: apt
+install:
+script:
+deploy:
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: greensprint.io
+    endpoint: greensprint.io.s3-website-us-east-1.amazonaws.com
+    region: us-east-1
+    skip_cleanup: true
+    local-dir: output
+    acl: public_read
+    detect_encoding: true
+notifications:
+    email:
+        on_failure: always
